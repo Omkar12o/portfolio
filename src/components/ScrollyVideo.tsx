@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { MotionValue, useMotionValueEvent } from "framer-motion";
 
+<<<<<<< HEAD
 const FRAME_COUNT = 30;
+=======
+const FRAME_COUNT = 76;
+>>>>>>> c6b6fd4411b9ab5642f1e79daca3eebf879c1101
 
 const currentFrame = (index: number) =>
   `/sequence/frame_${index.toString().padStart(2, "0")}_delay-0.07s.png`;
@@ -20,7 +24,6 @@ export default function ScrollyVideo({ scrollYProgress, children }: Props) {
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
-
 
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
